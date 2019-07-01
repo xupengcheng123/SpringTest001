@@ -3,14 +3,15 @@ package cn.bdqn.service.Impl;
 import cn.bdqn.dao.IUserDao;
 import cn.bdqn.entity.User;
 import cn.bdqn.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@Service(value = "userService")
+@Service("userService")
 class UserServiceImpl implements IUserService {
-    @Resource
+    @Autowired
     private IUserDao userDao;
 
     public IUserDao getUserDao() {
